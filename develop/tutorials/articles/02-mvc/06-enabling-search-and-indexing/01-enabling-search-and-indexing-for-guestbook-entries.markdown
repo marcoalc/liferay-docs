@@ -263,7 +263,7 @@ to add a text field to the document, etc.
 **Note:** By default, only three document fields are searched by Liferay's
 `LuceneIndexSearcher`: `content`, `description`, and `title`. If you want other
 fields to be searched, you can add a custom facet to your `SearchContext`.
-Please see the [Faceted Search in Liferay]() tutorial for more details.
+Please see the [Faceted Search in Liferay](https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-2/faceted-search-and-customized-search-filtering) tutorial for more details.
 
 $$$
 
@@ -331,7 +331,7 @@ before the return statement:
 
     indexer.reindex(entry);
 
-Use *Ctrl-Shift-T* to add and organize imports. Here, you're retrieving an
+Use *Ctrl-Shift-O* to add and organize imports. Here, you're retrieving an
 instance of the `EntryIndexer` that you created earlier. How do you know that
 you're obtaining an instance of the correct indexer? Since you registered
 `EntryIndexer` in your guestbook-portlet project's `liferay-portlet.xml` file,
