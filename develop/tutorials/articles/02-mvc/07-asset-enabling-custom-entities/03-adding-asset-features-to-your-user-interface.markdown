@@ -179,8 +179,7 @@ contents with the following contents:
 
 Here, you're using Liferay and AUI JSP tags to add tags, categories, and related
 assets to the form for adding or updating a guestbook. First, you add the
-`<liferay-ui:asset-categories-error />` and `<liferay-ui:asset-categories-error
-/>` tags to the form. These tags are responsible for displaying custom error
+`<liferay-ui:asset-categories-error />` and ` <liferay-ui:asset-tags-error />` tags to the form. These tags are responsible for displaying custom error
 messages that appear if an error occurs with the categories or tags that are
 submitted on the form. Next comes a `<liferay-ui:panel>` tag with several
 attributes set. The `<liferay-ui:panel>` tag generates a collapsible section
