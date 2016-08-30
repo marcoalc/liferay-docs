@@ -64,7 +64,7 @@ to validate. Next, note that you have to specify a value for the `name`
 attribute. The value of the `name` attribute determines the type of validation
 to apply to the field. You added an `aui:validator name="required" />` tag to
 all the non-hidden form fields. This prevents blank empty fields from being
-submitted. For the email field, you've added an `aui:validator name="required"
+submitted. For the email field, you've added an `aui:validator name="email"
 />` tag. This ensures that only valid email addresses can be submitted. 
 
 In the code above, you also changed the message field from a text input field to
