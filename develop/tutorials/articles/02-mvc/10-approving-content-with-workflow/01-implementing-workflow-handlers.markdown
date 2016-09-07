@@ -71,7 +71,7 @@ The most important thing to note is that this class calls `updateStatus` from
 ## Creating a Workflow Handler for Guestbooks [](id=creating-a-workflow-handler-for-guestbooks)
 
 Each workflow enabled entity needs a `WorkflowHandler`. Create
-`GuestbokWorkflowHandler` in `com.liferay.docs.guestbook.workflow`. Populate it
+`GuestbookWorkflowHandler` in `com.liferay.docs.guestbook.workflow`. Populate it
 with the following code:
 
     public class GuestbookWorkflowHandler  extends BaseWorkflowHandler {
