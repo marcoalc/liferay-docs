@@ -21,7 +21,7 @@ some modifications to put values in these fields.
 ## Setting the Workflow Fields in EntryLocalServiceImpl [](id=setting-the-workflow-fields-in-entrylocalserviceimpl)
 
 Open `EntryLocalServiceImpl` and add the following line in the
-`addGuestbookEntry` method, immediately following the current setter methods
+`addEntry` method, immediately following the current setter methods
 (e.g., `entry.setMessage(message)`):
 
     entry.setStatus(WorkflowConstants.STATUS_DRAFT);
@@ -30,7 +30,7 @@ This manually sets the status of the workflow as a draft; in the `GB_Entry`
 database table, you'll now see the `status` field of an added `Entry` with the
 value `2`. But you still haven't set the rest of the values.
 
-Still in the `addGuestbookEntry` method, place the following code right before
+Still in the `addEntry` method, place the following code right before
 the `return` statement:
 
     WorkflowHandlerRegistryUtil.startWorkflowInstance(entry.getCompanyId(), 
@@ -49,7 +49,7 @@ you'll create later in this Learning Path. The service layer must also update
 the workflow status fields you added to `service.xml`. For this purpose, add the
 following method to the bottom of `EntryLocalServiceImpl`:
 
-     public Entry updateStatus(long userId, long guestbookId, long entryId, int status,
+     public Entry updateStatus(long userId, long entryId, int status,
 			ServiceContext serviceContext) throws PortalException,
 			SystemException {
 
@@ -129,7 +129,7 @@ The service layer must be able to update the workflow status fields you added to
 		guestbook.setStatusByUserName(user.getFullName());
 		guestbook.setStatusDate(new Date());
 
-		entryPersistence.update(entry);
+		guestbookPersistence.update(guestbook);
 
 		if (status == WorkflowConstants.STATUS_APPROVED) {
 
